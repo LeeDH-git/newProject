@@ -10,16 +10,22 @@ SHOW GRANTS FOR 'highgarden_user'@'localhost';
 
 USE highgarden_db;
 
+show tables;
+
 /*계약 테이블*/
-create table board_table
+create table contract_table
 (
-    id bigint primary key auto_increment,
-    boardTitle varchar(50),
-    boardWriter varchar(20),
-    boardContents varchar(500),
-    createdAt datetime default now(),
-    fileAttached int default 0
+    conNo bigint primary key auto_increment,
+    orderer varchar(50),
+    oriCon varchar(50),
+    subCon varchar(50),
+    conName varchar(150),
+    conLocation varchar(150),
+    conAmount bigint,
+    laborCost bigint
 );
+
+desc contract_table;
 
 /*정산 테이블*/
 create table board_table

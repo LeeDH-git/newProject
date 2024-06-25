@@ -1,12 +1,12 @@
 계약테이블 
-- <u>'PK' 인덱스 </u> 
-- 발주자 (varchar (50))
-- 원사업자 (varchar (50))
-- 하도사업자 (varchar (50))
-- 공사명 (varchar (150)) 
-- 공사장소 (varchar (150))
-- 계약금액 (int)
-- 노무비 (int)
+- <u>'PK' conNo  인덱스 (bigint) </u>
+- orderer 발주자 (varchar (50))
+- oriCon 원사업자 (varchar (50))
+- subCon 하도사업자 (varchar (50))
+- conName 공사명 (varchar (150))
+- conLocation 공사장소 (varchar (150))
+- conAmount 계약금액 (bigint)
+- laborCost 노무비 (bigint)
 ---
 정산테이블
 - <u>'PK' 인덱스 </u>
