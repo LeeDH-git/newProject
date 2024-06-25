@@ -43,12 +43,13 @@ src
 └─test
 ```
 
-소스:https://github.com/977med/springboot-board.git
+소스:https://generalcoder.tistory.com/category/%EB%A7%8C%EB%93%A4%EC%9E%90
 
 *업무시스템 설계
 
 1. 계약서 조회/검색/등록 
 2. 정산서 조회/검색/등록 
-3. 각종 서류들 (시국세같은) 조회/등록
-4. 양식 예제들 등록/조회/검색/등록
+3. 사업자 조회
+4. 각종 서류들 (시국세같은) 조회/등록
+5. 양식 예제들 등록/조회/검색/등록
 

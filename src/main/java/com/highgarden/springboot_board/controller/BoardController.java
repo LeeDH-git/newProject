@@ -19,13 +19,65 @@ import java.util.List;
 public class BoardController {
     private final BoardService boardService;
 
-    @GetMapping("/save")
-    public String save(){
-        return "save";
+    // 계약서
+    @GetMapping("/contract")
+    public String contract(){
+        return "contract";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/contract")
+    public String contract(BoardDTO boardDTO) throws IOException {
+        System.out.println("boardDTO = " + boardDTO);
+        boardService.save(boardDTO);
+        return "redirect:/list";
+    }
+    // 정산서
+    @GetMapping("/calculate")
+    public String calculate(){
+        return "calculate";
+    }
+
+    @PostMapping("/calculate")
     public String save(BoardDTO boardDTO) throws IOException {
+        System.out.println("boardDTO = " + boardDTO);
+        boardService.save(boardDTO);
+        return "redirect:/list";
+    }
+
+    // 사업자조회
+    @GetMapping("/businessReg")
+    public String businessReg(){
+        return "businessReg";
+    }
+
+    @PostMapping("/businessReg")
+    public String businessReg(BoardDTO boardDTO) throws IOException {
+        System.out.println("boardDTO = " + boardDTO);
+        boardService.save(boardDTO);
+        return "redirect:/list";
+    }
+
+    // 서류
+    @GetMapping("/document")
+    public String document(){
+        return "document";
+    }
+
+    @PostMapping("/document")
+    public String document(BoardDTO boardDTO) throws IOException {
+        System.out.println("boardDTO = " + boardDTO);
+        boardService.save(boardDTO);
+        return "redirect:/list";
+    }
+
+    // 샘플양식
+    @GetMapping("/sampleDoc")
+    public String sampleDoc(){
+        return "sampleDoc";
+    }
+
+    @PostMapping("/sampleDoc")
+    public String sampleDoc(BoardDTO boardDTO) throws IOException {
         System.out.println("boardDTO = " + boardDTO);
         boardService.save(boardDTO);
         return "redirect:/list";
