@@ -15,17 +15,21 @@ show tables;
 /*계약 테이블*/
 create table contract_table
 (
-    conNo bigint primary key auto_increment,
-    orderer varchar(50),
-    oriCon varchar(50),
-    subCon varchar(50),
-    conName varchar(150),
-    conLocation varchar(150),
-    conAmount bigint,
-    laborCost bigint
+    conNo bigint primary key auto_increment, /*인덱스*/
+    orderer varchar(50) not null, /*발주자*/
+    oriCon varchar(50) not null, /*원사업자*/
+    subCon varchar(50) not null, /*하도사업자*/
+    conName varchar(150) not null, /*공사명*/
+    conLocation varchar(150) not null, /*공사장소*/
+    conAmount bigint not null, /*계약금액*/
+    laborCost bigint not null /*노무비*/
 );
 
 desc contract_table;
+
+insert into contract_table(conNo,orderer,oriCon,subCon,conName,conLocation,conAmount,laborCost) values(0,'한국전력공사','성도이엔지','대양기초','시흥시 파일공사','경기도 시흥',50000000,3000000);
+
+select * from contract_table;
 
 /*정산 테이블*/
 create table board_table
